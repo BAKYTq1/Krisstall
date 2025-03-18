@@ -1,0 +1,180 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 15px 0;
+    box-shadow: 0px 6px 22px 0px rgba(219, 30, 30, 0.03);
+    border-bottom: 2px solid #f0ece8;
+    z-index: 1000; 
+
+    .header-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .header-logo img {
+        height: 40px;
+    }
+
+    .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 20px;
+
+            li {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 500;
+                color: rgb(61, 66, 73);
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #a67c52;
+                }
+            }
+        }
+    }
+
+    .catalog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 127px;
+        height: 45px;
+        border-radius: 45px;
+        background: rgb(161, 99, 65);
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background: rgb(140, 80, 50);
+        }
+
+        h4 {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .icon {
+            color: white;
+            font-size: 18px;
+        }
+    }
+
+    .header-profile {
+        .profile-btn {
+            width: 186px;
+            height: 45px;
+            border: 1px solid rgb(219, 225, 237);
+            border-radius: 45px;
+            background-color: transparent;
+            color: rgb(61, 66, 73);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+
+            &:hover {
+                background: rgb(219, 225, 237);
+            }
+
+            svg {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .header {
+        .header-section {
+            padding: 0 10px;
+        }
+
+        .header-nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .header-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header-nav {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        .header-profile {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        .header-section {
+            padding: 10px;
+        }
+
+        .header-nav {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .header-nav ul {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .catalog {
+            width: 100px;
+            height: 40px;
+            font-size: 12px;
+        }
+
+        .header-profile .profile-btn {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+}
