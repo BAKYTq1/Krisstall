@@ -1,6 +1,7 @@
 import "react";
 import "./style.scss";
 
+
 function Blllock2({ setActiveCategory }) { // Принимаем setActiveCategory из Block2
   return (
     <div className="menu-block2">
