@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.m{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px;
+    padding: 120px;
+}
+.maad{
+  width: 100%;
+  text-align: center;
+}
+.product-card {
+    width: 562px;
+    border-radius: 14px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid gray;
+  }
+  .address{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .medina1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .medina-left{
+    width: 320px;
+     display: flex;
+     flex-direction: column;
+     margin-left: 22px;
+     h3{
+      gap: 5px;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      span{
+        font-size: 12px;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+      }
+     }
+  }
+  .medina-right{
+    width: 245px;
+    flex-basis: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .c{
+
+
+  margin: 10px;
+  color: #A16341 ;
+  background-color: white;
+  border: 1px solid #A16341;
+  border-radius: 25px;
+  margin-top: auto;
+  padding: 10px;
+
+
+
+    
+ 
+  }
+
+
+
+
+
