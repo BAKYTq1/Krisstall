@@ -1,0 +1,44 @@
+.menu-block2{
+    width: 285px;
+    height: 1780px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    .catalog{
+  width: 225px;
+  height: 1650px;
+  margin-top: 30px;
+  background-color: #F3F4F5;
+  border-radius: 14px;
+  padding-top: 15px;
+  h2{
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 209px;
+    height: 50px;
+    text-align: left;
+    padding-left: 25px;
+    background-color: #fff;
+     display: flex;
+     align-items: center;
+    font-size: 14px;
+    font-family: "inter", "sans-serif";
+  }
+  ul{
+    margin-top:15px;
+    line-height: 35px;    
+    li{
+        a{
+            color: #728299;
+            text-decoration: none;
+        }
+    }
+    li:hover{
+        
+        a{
+            color: #495f7d;
+        }
+    }
+  }
+    }
+}
