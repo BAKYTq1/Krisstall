@@ -6,6 +6,9 @@
     text-decoration: none;
     outline: none;
 }
+body{
+    background: rgb(245, 245, 245);
+}
 .wrapper{
     width: 1440px;
     margin: 0 auto;
