@@ -1,4 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+function Header() {
+  return (
+    <div>
+      <nav>
+        <ul>
+      <Link to={"/WholesaleSales"}>
+        <li>Оптовые продажи</li>
+      </Link>
+
+        </ul>
+      </nav>
+      header
 import logo from "../../assets/svg/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
@@ -32,7 +46,6 @@ function Header() {
         </div>
 
       </div>
- 
     </div>
   )
 }
