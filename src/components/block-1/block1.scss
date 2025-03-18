@@ -4,6 +4,7 @@
     height: 340px;
     margin-top: 20px;
     position: relative;
+    margin: 0 auto;
     img{
         display: flex;
         align-items: center;
@@ -18,6 +19,25 @@
 
     }
 }
+
+
+ 
+
+  @media (max-width: 768px) {
+    img {
+      width: 728px;
+      height: 450px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    img {
+      content: url('../../assets/images/bannerAdap.png');
+      width: 375px;
+      height: 531px;
+
+    }
+  }
 
 
 

@@ -1,6 +1,5 @@
 import "react";
 import "./style.scss";
-import Twoblock2 from "./twoblock2/Twoblock2";
 
 function Blllock2({ setActiveCategory }) { // Принимаем setActiveCategory из Block2
   return (
