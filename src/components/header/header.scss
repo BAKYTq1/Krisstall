@@ -34,6 +34,9 @@
             margin: 0;
             gap: 20px;
 
+            a{
+             text-decoration: none;
+            }
             li {
                 margin: 0;
                 font-size: 14px;
@@ -41,7 +44,6 @@
                 color: rgb(61, 66, 73);
                 cursor: pointer;
                 transition: color 0.3s;
-
                 &:hover {
                     color: #a67c52;
                 }
@@ -60,7 +62,7 @@
         background: rgb(161, 99, 65);
         cursor: pointer;
         transition: background 0.3s;
-
+        border: none;
         &:hover {
             background: rgb(140, 80, 50);
         }
@@ -106,18 +108,67 @@
         }
     }
 }
+.click-btn-header{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid black;
+    transition: all 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 40px;
+        a{
+            text-decoration: none;
+           }
+        li {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgb(61, 66, 73);
+            cursor: pointer;
+            transition: color 0.3s;
 
-
-@media (max-width: 875px) {
+            &:hover {
+                color: #a67c52;
+            }
+        }
+    }
+}
+@media (max-width: 885px) {
     .header {
         .header-section {
             padding: 0 10px;
         }
-
+       .header-logo{
+        margin: 0 auto;
+       }
         .header-nav ul {
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
+            display: none;
+        }
+        .catalogg {
+            position: relative;
+            display: block;
+          .icon{
+            position: absolute;
+            top: 6px;
+            left: 20px;
+          }
+          h4{
+         position: absolute;
+         top: 2px;
+         left: 46px;
+          }
         }
     }
 }
@@ -125,26 +176,18 @@
 @media (max-width: 768px) {
     .header {
         .header-section {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            
         }
 
         .header-nav {
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            gap: 10px;
+          
 
             ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+               
             }
         }
 
         .header-profile {
-            margin-top: 10px;
         }
     }
 }

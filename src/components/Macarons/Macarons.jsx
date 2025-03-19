@@ -10,7 +10,7 @@ const Macarons = () => {
       <h1>Продажи в рознице</h1>
     </div>
       <div className="product-card">
- <img src= {MacaronImage}  alt= "" />
+ <img src= {MacaronImage}  alt= "" className="macaron-img1"/>
  <div className="medina1">
   <div className="medina-left">
     <h3 className="title">Коллаж <span>Амурская улица, 22А</span></h3>
@@ -23,10 +23,10 @@ const Macarons = () => {
   <button className="c" >Забронировать продукцию</button>
    </div>
  </div>
-
+ <button className="btn-mrc">Забронировать продукцию</button>
 </div>
       <div className="product-card">
- <img src= {MacaronImage}  alt= "" />
+ <img src= {MacaronImage}  alt= "" className="macaron-img1"/>
  <div className="medina1">
   <div className="medina-left">
     <h3 className="title">Коллаж <span>Амурская улица, 22А</span></h3>
@@ -39,10 +39,10 @@ const Macarons = () => {
   <button className="c" >Забронировать продукцию</button>
    </div>
  </div>
-
+ <button className="btn-mrc">Забронировать продукцию</button>
 </div>
       <div className="product-card">
- <img src= {MacaronImage}  alt= "" />
+ <img src= {MacaronImage}  alt= "" className="macaron-img1"/>
  <div className="medina1">
   <div className="medina-left">
     <h3 className="title">Коллаж <span>Амурская улица, 22А</span></h3>
@@ -55,10 +55,10 @@ const Macarons = () => {
   <button className="c" >Забронировать продукцию</button>
    </div>
  </div>
-
+ <button className="btn-mrc">Забронировать продукцию</button>
 </div>
       <div className="product-card">
- <img src= {MacaronImage}  alt= "" />
+ <img src= {MacaronImage}  alt= "" className="macaron-img1"/>
  <div className="medina1">
   <div className="medina-left">
     <h3 className="title">Коллаж <span>Амурская улица, 22А</span></h3>
@@ -71,10 +71,10 @@ const Macarons = () => {
   <button className="c" >Забронировать продукцию</button>
    </div>
  </div>
-
+ <button className="btn-mrc">Забронировать продукцию</button>
 </div>
       <div className="product-card">
- <img src= {MacaronImage}  alt= "" />
+ <img src= {MacaronImage}  alt= "" className="macaron-img1"/>
  <div className="medina1">
   <div className="medina-left">
     <h3 className="title">Коллаж <span>Амурская улица, 22А</span></h3>
@@ -87,6 +87,7 @@ const Macarons = () => {
   <button className="c" >Забронировать продукцию</button>
    </div>
  </div>
+   <button className="btn-mrc">Забронировать продукцию</button>
 
 </div>
 
