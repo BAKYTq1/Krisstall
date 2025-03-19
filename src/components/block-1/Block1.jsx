@@ -20,7 +20,7 @@ function Block1() {
         <img src={banner2} alt="" />
       </Carousel.Item>
       <Carousel.Item>
-        <img src={banner1} alt=""  width={1400}/>
+        <img src={banner1} alt=""/>
       </Carousel.Item >
 
     </Carousel>
