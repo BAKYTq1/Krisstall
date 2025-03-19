@@ -37,9 +37,18 @@ function Block2() {
             ? [...cakesData,...otherData].filter((item) => item.category === "Супы")
             : activeCategory === "blinchiki"
             ? [...cakesData,...otherData].filter((item) => item.category === "Блинчики")
+            : activeCategory === "salaty"
+            ? [...cakesData,...otherData].filter((item) => item.category === "Салаты")
+            : activeCategory === "deserty"
+            ? [...cakesData,...otherData].filter((item) => item.category === "Десерты")
+            : activeCategory === "dobavliandsous"
+            ? [...cakesData,...otherData].filter((item) => item.category === "Добавки и соусы")
+            : activeCategory === "sendvichi"
+            ? [...cakesData,...otherData].filter((item) => item.category === "Сэндвичи")
             : activeCategory === "combo"
             ? [...cakesData, ...otherData].filter((item) => item.category === "Комбо")
-            : cakesData; // По умолчанию показываем только торты
+            : cakesData;
+            
 
     return (
         <div className="api-blocks">
@@ -77,6 +86,12 @@ function Block2() {
                 <li>
                     <a href="#" onClick={() => setActiveCategory("supy")}>Супы</a>
                 </li>
+                <li>
+            <a href="#" onClick={() => setActiveCategory("deserty")}>Десерты</a>
+          </li>
+          <li>
+            <a href="#" onClick={() => setActiveCategory("sendvichi")}>Сендвичи</a>
+          </li>
                 </ul>
                 <ul>
                 <li className="letnyi">Летнее меню</li>
@@ -89,6 +104,12 @@ function Block2() {
                 <li>
                     <a href="#" onClick={() => setActiveCategory("pizza")}>Пицца</a>
                 </li>
+                <li>
+            <a href="#" onClick={() => setActiveCategory("salaty")}>Салаты</a>
+          </li>
+          <li>
+            <a href="#" onClick={() => setActiveCategory("dobavliandsous")}>Добавки и соусы</a>
+          </li>
                 </ul>
             </div>
           </div>

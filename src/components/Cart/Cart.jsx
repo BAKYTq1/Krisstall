@@ -16,7 +16,9 @@ function Cart({ data }) {
         <div className='cart-img'>
             <img src={data.image} alt="" />
             <p>{data.gram} гр.</p>
-            <p>{data.callories} ккал.</p>
+            <p>
+  {data?.callories ? `${data.callories} ккал.` : `${data.kg} кг`}
+</p>
         </div>
         <div className='cart-text'>
             <div>

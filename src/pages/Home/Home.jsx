@@ -8,8 +8,6 @@ function Home() {
   return (
     <div>
     <Block1/>
-      home
-    {/* <Desktop/> */}
     <div className='two-blocks'>
     <Block2 /> 
     </div>
