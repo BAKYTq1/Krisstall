@@ -30,7 +30,6 @@ function WholesaleSales() {
                             </div>
                             <div className='scooterContainer'>
                                 <div className='scooter'>
-                                    {/* <img src={som} alt="" /> */}
                                     самакат
                                 </div>
                             </div>
@@ -75,6 +74,9 @@ function WholesaleSales() {
                         <button>Отправить</button>
                     </div>
                 </div>
+            </div>
+            <div>
+                f
             </div>
         </section>
     </div>
