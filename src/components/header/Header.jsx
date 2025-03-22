@@ -25,14 +25,12 @@ function Header() {
             <li>Вакансии</li>
             <li>Отзывы</li>
           </ul>
-
         </nav>
-        <div className='header-profile'>
-          <button className='profile-btn'>
-          <FaRegUser />   Личный кабинет
+        <div className="header-profile">
+          <button className="profile-btn">
+            <FaRegUser /> Личный кабинет
           </button>
         </div>
-
       </div>
       { open && <div  className='click-btn-header'>
         <ul>
@@ -43,7 +41,7 @@ function Header() {
             <li>Отзывы</li>
           </ul></div>}
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
