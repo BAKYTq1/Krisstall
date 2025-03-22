@@ -1,16 +1,12 @@
-import { configureStore} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
+import CakesReducer from './CakesApi/CakesApi';
+import OtherReducer from './OtherApi/OtherApi';
 
-export const myStore = configureStore({
-
-import { configureStore, } from "@reduxjs/toolkit";
-import CakesReduser from './CakesApi/CakesApi'
-import OtherReducer from './OtherApi/OtherApi'
 const myStore = configureStore({
-
     reducer: {
-        cakes: CakesReduser,
-        other:OtherReducer,
+        cakes: CakesReducer,
+        other: OtherReducer,
     }
-})
+});
 
 export default myStore;
