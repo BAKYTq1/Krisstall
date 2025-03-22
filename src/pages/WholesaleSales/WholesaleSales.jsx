@@ -77,6 +77,9 @@ function WholesaleSales() {
             </div>
             <div>
                 f
+                <div>
+                    <h1>dfd</h1>
+                </div>
             </div>
         </section>
     </div>
