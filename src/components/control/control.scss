@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.control{
+    width: 100%;
+    height: 440px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 40px 40px 0px 0px;
+    background-color:rgb(255, 235, 224);
+    gap: 80px;
+    margin-top: 30px;
+    h1{
+    color: rgb(25, 25, 25);
+    font-family: Playfair Display;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: center;
+    }
+    .control-content{
+        display: flex;
+        justify-content: space-around;
+        .control-card{
+            width: 280px;
+            height: 220px;
+            border-radius: 10px;
+            background-color:white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            box-shadow: 4px 4px 4px 4px rgba(189, 179, 179, 0.141);
+            img{
+                width: 130px;
+                height: 130px;
+                background-color:rgb(255, 235, 224) ;
+                padding: 25px;
+                border-radius: 50%;
+            }
+            h2{
+                color: rgb(25, 25, 25);
+                font-family: Playfair Display;
+                font-size: 20px;
+                font-weight: 800;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+            }
+        }
+    }
+}
