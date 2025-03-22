@@ -1,4 +1,4 @@
-import React from 'react'
+import 'react'
 import "./WholesaleSales.scss"
 import flower from "./svg/flowerHead.svg"
 import flowerBody from "./svg/flowerBody.svg"
