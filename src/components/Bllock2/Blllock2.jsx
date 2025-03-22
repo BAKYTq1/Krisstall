@@ -12,7 +12,7 @@ function Blllock2({ setActiveCategory }) { // Принимаем setActiveCatego
             <a href="#" onClick={() => setActiveCategory("cakes")}>Торты</a>
           </li>
           <li>
-            <a href="#" onClick={() => setActiveCategory("coffee")}>Кофе и чай</a>
+            <a href="#" onClick={() => setActiveCategory("coffee")}>Кофе</a>
           </li>
           <li>
             <a href="#" onClick={() => setActiveCategory("deserty")}>Десерты</a>

@@ -2,7 +2,6 @@ import React from 'react'
 import "./WholesaleSales.scss"
 import flower from "./svg/flowerHead.svg"
 import flowerBody from "./svg/flowerBody.svg"
-import som from "./svg/сомакат.svg"
 import magnit from "./svg/магнит.svg"
 import karavan from "./svg/karavan.svg"
 import dis from "./svg/discrip.svg"

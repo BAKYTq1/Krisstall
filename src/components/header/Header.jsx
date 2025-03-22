@@ -15,14 +15,14 @@ function Header() {
              <h4>Каталог</h4>
           </button>
         <div className='header-logo'>
-          <img src={logo} alt="" />
+         <Link to={'/'}><img src={logo} alt="" /></Link>
         </div>
         <nav className='header-nav'>
           <ul>
           <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
             <li>Контакты</li>
-            <li>Вакансии</li>
+            <Link to={'kachestvo'}><li>Качесвто</li></Link>
             <li>Отзывы</li>
           </ul>
 
@@ -39,7 +39,7 @@ function Header() {
           <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
             <li>Контакты</li>
-            <li>Вакансии</li>
+            <Link to={'kachestvo'}><li>Качесвто</li></Link>
             <li>Отзывы</li>
           </ul></div>}
     </div>
