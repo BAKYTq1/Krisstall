@@ -1,47 +1,38 @@
-import "react";
+import React from "react";
 import "./style.scss";
 
-function Blllock2({ setActiveCategory }) { // Принимаем setActiveCategory из Block2
+function Block2({ setActiveCategory, activeCategory }) { 
   return (
     <div className="menu-block2">
       <h1>Меню</h1>
       <div className="catalog">
         <h2>Летнее меню</h2>
         <ul>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("cakes")}>Торты</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("coffee")}>Кофе</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("deserty")}>Десерты</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("combo")}>Комбо</a> 
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("sendvichi")}>Сендвичи</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("pizza")}>пицца</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("blinchiki")}>Блинчики</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("supy")}>Супы</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("salaty")}>Салаты</a>
-          </li>
-          <li>
-            <a href="#" onClick={() => setActiveCategory("dobavliandsous")}>Добавки и соусы</a>
-          </li>
+          {[
+            { id: "cakes", label: "Торты" },
+            { id: "coffee", label: "Кофе" },
+            { id: "deserty", label: "Десерты" },
+            { id: "combo", label: "Комбо" },
+            { id: "sendvichi", label: "Сендвичи" },
+            { id: "pizza", label: "Пицца" },
+            { id: "blinchiki", label: "Блинчики" },
+            { id: "supy", label: "Супы" },
+            { id: "salaty", label: "Салаты" },
+            { id: "dobavliandsous", label: "Добавки и соусы" },
+          ].map(({ id, label }) => (
+            <li key={id}>
+              <button 
+                onClick={() => setActiveCategory(id)}
+                className={activeCategory === id ? "active" : ""}
+              >
+                {label}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
   );
 }
 
-export default Blllock2;
+export default Block2;
