@@ -7,18 +7,26 @@ import "./style.scss";
 import { X } from "lucide-react";
 import { CgMenuRight } from "react-icons/cg";
 import Blllock2 from "../Bllock2/Blllock2";
+import { getCoffeeApi } from "../../redux/Coffeapi/CoffeApi";
 function Block2() {
     const dispatch = useDispatch();
     const { data: cakesData, loading: cakesLoading, error: cakesError } = useSelector((state) => state.cakes);
     const { data: otherData, loading: otherLoading, error: otherError } = useSelector((state) => state.other);
+    const { data: coffeData, loading: coffeeLoading, error: coffeeError } = useSelector((state) => state.coffee);
     const [activeCategory, setActiveCategory] = useState("cakes");
     const [isOpen, setIsOpen] = useState(false);
+    console.log(coffeData);
+    
     useEffect(() => {
         if (!cakesData.length) {
             dispatch(getCakes());
         }
     }, [dispatch, cakesData.length]);
-
+ useEffect(() => {
+        if (!coffeData.length) {
+            dispatch(getCoffeeApi());
+        }
+ }, [dispatch, coffeData.length]);
     useEffect(() => {
         if (!otherData.length) { 
             dispatch(getOtherApi());
@@ -28,26 +36,34 @@ function Block2() {
     if (cakesLoading || otherLoading) return <p>Загрузка...</p>;
     if (cakesError) return <p>Ошибка: {cakesError}</p>;
     if (otherError) return <p>Ошибка: {otherError}</p>;
+    if (coffeeLoading) return <p>Загрузка...</p>;
+    if (coffeeError) return <p>Ошибка: {coffeeError}</p>;
 
     // Фильтруем товары по категории
-    const filteredData =
-        activeCategory === "pizza"
-            ? otherData.filter((item) => item.category === "Пицца")
-            : activeCategory === "supy"
-            ? [...cakesData,...otherData].filter((item) => item.category === "Супы")
-            : activeCategory === "blinchiki"
-            ? [...cakesData,...otherData].filter((item) => item.category === "Блинчики")
-            : activeCategory === "salaty"
-            ? [...cakesData,...otherData].filter((item) => item.category === "Салаты")
-            : activeCategory === "deserty"
-            ? [...cakesData,...otherData].filter((item) => item.category === "Десерты")
-            : activeCategory === "dobavliandsous"
-            ? [...cakesData,...otherData].filter((item) => item.category === "Добавки и соусы")
-            : activeCategory === "sendvichi"
-            ? [...cakesData,...otherData].filter((item) => item.category === "Сэндвичи")
-            : activeCategory === "combo"
-            ? [...cakesData, ...otherData].filter((item) => item.category === "Комбо")
-            : cakesData;
+    const filteredData = activeCategory === "pizza"
+    ? otherData.filter((item) => item.category === "Пицца")
+    : activeCategory === "coffee"
+    ? coffeData.filter((item) => item.ingredients[0] === "Coffee" || item.ingredients[0] === "Espresso")
+    : activeCategory === "supy"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Супы")
+    : activeCategory === "cakes"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Тортик")
+    : activeCategory === "blinchiki"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Блинчики")
+    : activeCategory === "salaty"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Салаты")
+    : activeCategory === "deserty"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Десерты")
+    : activeCategory === "dobavliandsous"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Добавки и соусы")
+    : activeCategory === "sendvichi"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Сэндвичи")
+    : activeCategory === "combo"
+    ? [...cakesData, ...otherData].filter((item) => item.category === "Комбо")
+    : activeCategory === "discount"
+    ? [...cakesData, ...otherData, ...coffeData].filter((item) => item.price && item.price < 500) // Проверяем наличие price
+    : cakesData;
+
             
 
     return (
