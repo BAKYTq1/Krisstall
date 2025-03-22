@@ -1,4 +1,4 @@
-import 'react'
+import React from 'react'
 import "./WholesaleSales.scss"
 import flower from "./svg/flowerHead.svg"
 import flowerBody from "./svg/flowerBody.svg"
@@ -30,6 +30,7 @@ function WholesaleSales() {
                             </div>
                             <div className='scooterContainer'>
                                 <div className='scooter'>
+                                    {/* <img src={som} alt="" /> */}
                                     самакат
                                 </div>
                             </div>
@@ -73,12 +74,6 @@ function WholesaleSales() {
                         <input placeholder='Email' type="email" />
                         <button>Отправить</button>
                     </div>
-                </div>
-            </div>
-            <div>
-                f
-                <div>
-                    <h1>dfd</h1>
                 </div>
             </div>
         </section>
