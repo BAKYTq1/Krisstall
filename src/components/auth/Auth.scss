@@ -1,0 +1,129 @@
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(245, 245, 245);}
+.auth-box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 507px;
+height: 598px;
+}
+.auth-title{
+    color: rgb(25, 25, 25);
+    font-family: Playfair Display;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.auth-input{
+    width: 420px;
+    box-sizing: border-box;
+    border: 1px solid rgb(191, 201, 214);
+    border-radius: 56px;
+    height: 50px;
+    
+}
+.auth-button {
+    width: 420px;
+height: 50px;
+
+    margin: 10px 10px;
+    background: rgb(161, 99, 65);
+    color: white;
+    border: none;
+    border-radius: 56px;
+    cursor: pointer;
+  }
+  .auth-button:hover {
+    background: #8b1e1e;
+  }
+  
+  .auth-back {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .auth-back:hover {
+    text-decoration: underline;
+  }
+  
+  .social-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 56px;
+  }
+  
+  .vk {
+    background: #4a76a8;
+  }
+  
+  .vk:hover {
+    background: #3b5c87;
+  }
+  
+  .google {
+    background: #db4437;
+  }
+  
+  .google:hover {
+    background: #b03024;
+  }
+  
+  .auth-method-button {
+    width: 100%;
+    padding: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 56px;
+    // display: flex;
+    gap: 10px;
+  }
+  
+  .auth-method-button:hover {
+    background: #bbb;
+  }
+  
+  .auth-code-button {
+    opacity: 0;
+  }
+  
+  .auth-code-button:hover {
+    width: 144px;
+height: 50px;
+    border-radius: 45px;
+
+background: rgb(161, 99, 65);
+color: rgb(255, 255, 255);
+font-family: Inter;
+font-size: 14px;
+font-weight: 500;
+line-height: 17px;
+letter-spacing: 0%;
+text-align: center;
+opacity: 1;
+  }
+  .con-par p{
+    color: rgb(136, 156, 185);
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 15px;
+letter-spacing: 0%;
+text-align: center;
+  }
