@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from "../../assets/svg/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
 import "./header.scss"
-
+import { SlClose } from "react-icons/sl";
 function Header() {
   const [open, setOpen] = useState(false)
+  const [delet, setDelet] = useState(<GiHamburgerMenu />)
+   useEffect(() => {
+    setDelet(open? <SlClose /> : <GiHamburgerMenu />)
+  }, [open])
   return (
     <div className='header'>
       <div className='header-section'>
@@ -28,7 +32,10 @@ function Header() {
         </nav>
         <div className="header-profile">
           <button className="profile-btn">
-            <FaRegUser /> Личный кабинет
+            <FaRegUser /> <h6>Личный кабинет</h6>
+          </button>
+          <button onClick={() => setOpen(!open)} className='catalogg-2'>
+             {delet}
           </button>
         </div>
       </div>
@@ -36,9 +43,9 @@ function Header() {
         <ul>
           <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
-            <li>Контакты</li>
+            <Link to={'contact'}><li>Контакты</li></Link>
             <Link to={'kachestvo'}><li>Качесвто</li></Link>
-            <li>Отзывы</li>
+            <Link to={'otzyv'}><li>Отзывы</li></Link>
           </ul></div>}
     </div>
   );

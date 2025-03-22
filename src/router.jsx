@@ -3,9 +3,9 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NotFound from "./components/NotFound/NotFound";
-import WholesaleSales from "./components/WholesaleSales/WholesaleSales";
+// import WholesaleSales from "./components/WholesaleSales/WholesaleSales";
 import OtherApi from "./components/OtherApi/OtherApi";
-import WholesaleSales from "./pages/WholesaleSales/WholesaleSales";
+// import WholesaleSales from "./pages/WholesaleSales/WholesaleSales";
 import Macarons from "./components/Macarons/Macarons";
 import Kachestwo from "./pages/Kachestvo/Kachestwo";
 
@@ -20,7 +20,7 @@ export const myRouter = createBrowserRouter([
             { path: '*', element: <NotFound /> },
             // { path: '/contact', element: <Contact /> },
             { path: '*', element: <NotFound /> },
-            { path: '/WholesaleSales', element: <WholesaleSales />},
+            // { path: '/WholesaleSales', element: <WholesaleSales />},
             { path: '/prodaji', element: <Macarons />},
             { path: '/kachestvo', element: <Kachestwo />}
         ]
