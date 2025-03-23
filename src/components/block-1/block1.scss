@@ -24,18 +24,18 @@
  
 
   @media (max-width: 768px) {
+    .carousel{
     img {
-      width: 728px;
-      height: 450px;
+      width: 100%;
+    }
     }
   }
 
   @media (max-width: 500px) {
+    .carousel{
     img {
-      content: url('../../assets/images/bannerAdap.png');
-      width: 375px;
-      height: 531px;
-
+      width: 100%;
+    }
     }
   }
 

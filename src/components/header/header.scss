@@ -8,7 +8,6 @@
     box-shadow: 0px 6px 22px 0px rgba(219, 30, 30, 0.03);
     border-bottom: 2px solid #f0ece8;
     z-index: 1000; 
-
     .header-section {
         display: flex;
         align-items: center;
@@ -97,7 +96,9 @@
             gap: 10px;
             cursor: pointer;
             transition: background 0.3s, color 0.3s;
-
+               h6{
+                margin-top: 6px;
+               }
             &:hover {
                 background: rgb(219, 225, 237);
             }
@@ -142,6 +143,11 @@
         }
     }
 }
+@media (min-width: 885px) {
+    .click-btn-header{
+  display: none;
+    }
+}
 @media (max-width: 885px) {
     .header {
         .header-section {
@@ -173,52 +179,99 @@
     }
 }
 
-@media (max-width: 768px) {
-    .header {
-        .header-section {
-            
-        }
-
-        .header-nav {
-          
-
-            ul {
-               
-            }
-        }
-
-        .header-profile {
-        }
+@media (min-width: 550px) {
+    .catalogg-2{
+        display: none;
     }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 550px) {
     .header {
+        
         .header-section {
-            padding: 10px;
+            height: 35px;
+        }
+       .header-logo{
+       margin-left: 0px;
+       }
+
+
+        .catalogg {
+            display: none;
         }
 
-        .header-nav {
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .header-nav ul {
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .catalog {
-            width: 100px;
-            height: 40px;
+        .header-profile{
+            gap: 10px;
+            display: flex;
+         .profile-btn {
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            border: none;
             font-size: 12px;
+            h6{
+                color: red;
+                display: none;
+            }
         }
+        }
+        .catalogg-2{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 41px;
+               height: 41px;
+               border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        transition: background 0.3s;
+        border: none;
+        }
+        .catalogg-2:hover{
+            color: #A16341;
+            border: 1px solid #A16341;
+            background-color: #FBECDA;
+        }
+        .click-btn-header{
+            margin-top: 10px;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            border-top: none;
+            position: absolute;
+            background-color: #fff;
+            text-align: start;
+            ul{
+                margin-top: -10px;
+                flex-direction: column;
+                line-height: 10px !important;
+                text-align: start;
+                a{
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    text-decoration: none;
+                    color: rgb(61, 66, 73);
+                    text-align: start !important;
+                    &:hover {
+                        color: #a67c52;
+                    }
+                    li{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: rgb(61, 66, 73);
+                        cursor: pointer;
+                        text-align: left;
+                        transition: color 0.3s;
+                        &:hover {
+                            color: #a67c52;
+                        }
+                    }
+                }
+            }
 
-        .header-profile .profile-btn {
-            width: 150px;
-            height: 40px;
-            font-size: 12px;
         }
+        
     }
 }

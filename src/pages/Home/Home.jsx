@@ -10,15 +10,7 @@ function Home() {
   return (
     <div>
     <Block1/>
-
-    <Desktop/>
-    <Auth/>
-      home
-
-    <div className='two-blocks'>
     <Block2 /> 
-    </div>
-
     </div>
   )
 }
