@@ -4,6 +4,8 @@ import logo from "../../assets/svg/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
 import "./header.scss"
+import { IoCartOutline } from "react-icons/io5";
+
 
 function Header() {
   const [open, setOpen] = useState(false)
@@ -31,6 +33,8 @@ function Header() {
             <FaRegUser /> Личный кабинет
           </button>
         </div>
+        <span><IoCartOutline />
+        </span>
       </div>
       { open && <div  className='click-btn-header'>
         <ul>
@@ -39,7 +43,8 @@ function Header() {
             <li>Контакты</li>
             <li>Вакансии</li>
             <li>Отзывы</li>
-          </ul></div>}
+          </ul>
+          </div>}
     </div>
   );
 }
