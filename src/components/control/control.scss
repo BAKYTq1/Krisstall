@@ -125,6 +125,7 @@
 }
 @media (max-width: 1024px) {
     .control{
+        background-color: transparent;
         height: 100%;
         .control-content{
             width: 100%;
@@ -145,11 +146,13 @@
 
 @media (max-width: 700px) {
       .control{
+        margin-top: 100px;
         height: 100%;
           .control-content{
-              display: flex;
-              align-items: center;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
               flex-direction: column;
+              align-items: center;
               gap: 20px;
             }
           }
@@ -157,4 +160,20 @@
             display: none;
       }
    
+  }
+  @media (max-width: 600px) {
+     .control{
+        margin-top: 400px;
+        .control-content{
+            margin: 0 auto;
+           display: grid;
+           grid-template-columns: repeat(1, 1fr);
+           gap: 10px;
+         }
+     }
+     .control-card{
+        
+        margin: 0 auto;
+        width: 300px !important;
+     }
   }

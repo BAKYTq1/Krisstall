@@ -7,6 +7,7 @@ import magnit from "./svg/магнит.svg"
 import karavan from "./svg/karavan.svg"
 import dis from "./svg/discrip.svg"
 import circle from "./svg/circle.svg"
+import Input from '../inpur/Input'
 
 function WholesaleSales() {
   return (
@@ -65,18 +66,7 @@ function WholesaleSales() {
             </div>
         </section>
         <section>
-            <div className='WholesaleSalesBlock3Container'>
-                <div className='WholesaleSalesBlock3Contant'>
-                    <img src={circle} alt="" />
-                    <h2>Форма связи с менеджером</h2>
-                    <div className='inputContainer'>
-                        <input placeholder='Ваше имя' type="text" />
-                        <input placeholder='Email' type="email" />
-                        <input placeholder='Email' type="email" />
-                        <button>Отправить</button>
-                    </div>
-                </div>
-            </div>
+            <Input/>
         </section>
     </div>
   )

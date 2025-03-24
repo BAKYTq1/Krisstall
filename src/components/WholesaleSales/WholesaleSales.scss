@@ -234,12 +234,13 @@ margin-bottom: 40px;
 
 .WholesaleSalesBlock2Container {
   width: 100%;
+  padding: 50px;
   max-width: 1200px;
   display: flex;
   justify-content: center;
 
   .WholesaleSalesBlock2Contant {
-    width: 1200px;
+    max-width: 1200px;
     @media (max-width:426px) {
      width: 319px;     
     }
@@ -364,6 +365,20 @@ margin-bottom: 40px;
           height: 44px;
         }
       }
+    }
+  }
+}
+
+@media (max-width:700px) {
+  .WholesaleSalesBlock3Container{
+    height: 450px !important;
+    border: none;
+  box-shadow: none;
+    background-color: transparent !important;
+  }
+  .inputContainer{
+    input{
+      width: 100% !important;
     }
   }
 }
