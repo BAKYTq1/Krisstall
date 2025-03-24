@@ -1,50 +1,61 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import logo from "../../assets/svg/logo.svg"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from "../../assets/svg/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
-import "./header.scss"
-import { IoCartOutline } from "react-icons/io5";
+import { SlClose } from "react-icons/sl";
+import { IoCartOutline } from "react-icons/io5"; // Добавлен импорт
 
+import "./header.scss";
 
 function Header() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+
   return (
     <div className='header'>
       <div className='header-section'>
-          <button onClick={() => setOpen(!open)} className='catalogg'>
-            <div className='icon'> <GiHamburgerMenu /></div>
-             <h4>Каталог</h4>
-          </button>
+        <button onClick={() => setOpen(!open)} className='catalogg'>
+          <div className='icon'> <GiHamburgerMenu /></div>
+          <h4>Каталог</h4>
+        </button>
+
         <div className='header-logo'>
-          <img src={logo} alt="" />
+          <Link to={'/'}><img src={logo} alt="Логотип" /></Link>
         </div>
+
         <nav className='header-nav'>
           <ul>
-          <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
-            <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
-            <li>Контакты</li>
-            <li>Вакансии</li>
-            <li>Отзывы</li>
+            <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
+            <Link to={"/prodaji"}><li>Продажи в рознице</li></Link>
+            <Link to={"/contact"}><li>Контакты</li></Link>
+            <Link to={"/kachestvo"}><li>Качество</li></Link>
+            <Link to={"/otzyv"}><li>Отзывы</li></Link>
           </ul>
         </nav>
+
         <div className="header-profile">
           <button className="profile-btn">
-            <FaRegUser /> Личный кабинет
+            <FaRegUser /> <h6>Личный кабинет</h6>
+          </button>
+          <button onClick={() => setOpen(!open)} className='catalogg-2'>
+            {open ? <SlClose /> : <GiHamburgerMenu />}
           </button>
         </div>
-        <span><IoCartOutline />
-        </span>
+
+        <span><IoCartOutline /></span>
       </div>
-      { open && <div  className='click-btn-header'>
-        <ul>
-          <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
-            <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
-            <li>Контакты</li>
-            <li>Вакансии</li>
-            <li>Отзывы</li>
+
+      {open && (
+        <div className='click-btn-header'>
+          <ul>
+            <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
+            <Link to={"/prodaji"}><li>Продажи в рознице</li></Link>
+            <Link to={"/contact"}><li>Контакты</li></Link>
+            <Link to={"/kachestvo"}><li>Качество</li></Link>
+            <Link to={"/otzyv"}><li>Отзывы</li></Link>
           </ul>
-          </div>}
+        </div>
+      )}
     </div>
   );
 }
