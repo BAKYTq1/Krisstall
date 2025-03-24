@@ -25,15 +25,15 @@ function Header() {
           <ul>
           <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
-            <li>Контакты</li>
+             <Link><li>Контакты</li></Link>
             <Link to={'kachestvo'}><li>Качесвто</li></Link>
             <li>Отзывы</li>
           </ul>
         </nav>
         <div className="header-profile">
-          <button className="profile-btn">
+         <Link to={'/register'}><button className="profile-btn">
             <FaRegUser /> <h6>Личный кабинет</h6>
-          </button>
+          </button></Link> 
           <button onClick={() => setOpen(!open)} className='catalogg-2'>
              {delet}
           </button>
