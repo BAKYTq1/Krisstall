@@ -3,10 +3,11 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import NotFound from "./components/NotFound/NotFound";
-// import WholesaleSales from "./components/WholesaleSales/WholesaleSales";
+import WholesaleSales from "./components/WholesaleSales/WholesaleSales";
 import OtherApi from "./components/OtherApi/OtherApi";
 import Macarons from "./components/Macarons/Macarons";
 import Kachestwo from "./pages/Kachestvo/Kachestwo";
+import Auth from "./components/auth/Auth";
 
 export const myRouter = createBrowserRouter([
     {
@@ -19,9 +20,10 @@ export const myRouter = createBrowserRouter([
             { path: '*', element: <NotFound /> },
             // { path: '/contact', element: <Contact /> },
             { path: '*', element: <NotFound /> },
-            // { path: '/WholesaleSales', element: <WholesaleSales />},
+            { path: '/WholesaleSales', element: <WholesaleSales />},
             { path: '/prodaji', element: <Macarons />},
-            { path: '/kachestvo', element: <Kachestwo />}
+            { path: '/kachestvo', element: <Kachestwo />},
+            { path: '/register', element: <Auth />}
         ]
     }
 ])

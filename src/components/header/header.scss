@@ -81,6 +81,9 @@
     }
 
     .header-profile {
+        a{
+            text-decoration: none;
+        }
         .profile-btn {
             width: 186px;
             height: 45px;
