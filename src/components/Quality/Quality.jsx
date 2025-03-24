@@ -15,6 +15,7 @@ function Quality() {
       </div>
       <div className="img-quality">
         <img src={imgRight} alt="" />
+        <img src={imgLeft} alt=""  className='img-22'/>
       </div>
     </div>
   )
