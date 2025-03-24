@@ -1,12 +1,12 @@
 .content{
-    width: 1440px;
+    max-width: 1440px;
     height: 500px;
     .supplier-top{
-        width: 1440px;
+        max-width: 1440px;
         height: 94px;
         background: rgb(255, 255, 255);
         border-bottom: 1px solid whitesmoke;
-        box-shadow: 1px 1px 3px gray;
+        box-shadow: 10px 10px 10px 0px rgb(224, 219, 219);
         display: flex;
         justify-content: space-around;
         .supplier-logo{
@@ -39,8 +39,9 @@
         display: flex;
         justify-content: space-around;
         background: rgb(245, 245, 245);
-        width: 1440px;
+        max-width: 1440px;
         height: 377px;
+        padding: 30px;
         justify-content: center;
         align-items: center;
         // width: 100vh;
