@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import myStore from './redux/store.js'
 
 
@@ -11,9 +12,7 @@ import myStore from './redux/store.js'
 createRoot(document.getElementById('root')).render(
   <StrictMode >
     <Provider store={myStore}>
-      
     <App />
-   
     </Provider>
   </StrictMode>,
 

@@ -4,6 +4,8 @@ import logo from "../../assets/svg/logo.svg"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaRegUser } from "react-icons/fa";
 import "./header.scss"
+import { IoCartOutline } from "react-icons/io5";
+
 import { SlClose } from "react-icons/sl";
 function Header() {
   const [open, setOpen] = useState(false)
@@ -38,11 +40,18 @@ function Header() {
              {delet}
           </button>
         </div>
+        <span><IoCartOutline />
+        </span>
       </div>
       { open && <div  className='click-btn-header'>
         <ul>
           <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
+            <li>Контакты</li>
+            <li>Вакансии</li>
+            <li>Отзывы</li>
+          </ul>
+          </div>}
             <Link to={'contact'}><li>Контакты</li></Link>
             <Link to={'kachestvo'}><li>Качесвто</li></Link>
             <Link to={'otzyv'}><li>Отзывы</li></Link>
