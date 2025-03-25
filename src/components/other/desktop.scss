@@ -234,9 +234,21 @@
         margin-bottom: 50px;
         row-gap: 20px !important;
         .card{
+            margin-left: -10px !important;
             margin: 0 auto;
-            width: 170px !important;
+            width: 150px !important;
 height: 197px!important;
         }
      }
+}
+
+@media (max-width: 350px) {
+    .cards-info{
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px !important;
+        .card{
+         width: 140px!important;
+        }
+    }
 }
