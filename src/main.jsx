@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import myStore from './redux/store.js'
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -15,8 +16,12 @@ createRoot(document.getElementById('root')).render(
     <Provider store={myStore}>
       
     <App />
+    <ToastContainer/>
    
     </Provider>
   </StrictMode>,
 
-)
+) 
+
+
+

@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound/NotFound";
 import OtherApi from "./components/OtherApi/OtherApi";
 import WholesaleSales from "./pages/WholesaleSales/WholesaleSales";
 import Macarons from "./components/Macarons/Macarons";
+import Auth from "./components/auth/Auth";
 
 export const myRouter = createBrowserRouter([
     {
@@ -19,7 +20,9 @@ export const myRouter = createBrowserRouter([
             // { path: '/contact', element: <Contact /> },
             { path: '*', element: <NotFound /> },
             { path: '/WholesaleSales', element: <WholesaleSales />},
-            { path: '/prodaji', element: <Macarons />}
+            { path: '/prodaji', element: <Macarons />},
+            { path: '/auth', element: <Auth />}
+
         ]
     }
 ])

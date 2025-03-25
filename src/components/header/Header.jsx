@@ -28,9 +28,12 @@ function Header() {
 
         </nav>
         <div className='header-profile'>
+          <Link to="/auth">
           <button className='profile-btn'>
           <FaRegUser />   Личный кабинет
           </button>
+          </Link>
+         
         </div>
 
       </div>

@@ -3,8 +3,14 @@ import "./Auth.scss";
 import { FaVk, FaPhone } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdEmail } from "react-icons/md";
-import {auth} from "../../fireBase"
-import { GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
+import { auth } from "../../fireBase"; // Убедитесь, что ваш Firebase настроен правильно
+import { 
+  GoogleAuthProvider, 
+  signInWithPopup, 
+  signInWithEmailAndPassword, 
+  RecaptchaVerifier, 
+  signInWithPhoneNumber 
+} from "firebase/auth";
 
 function Auth() {
   const [authMethod, setAuthMethod] = useState(null);
@@ -17,19 +23,28 @@ function Auth() {
   const signInWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
-      await signInWithPopup(auth, provider);
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Успешный вход через Google", user);
       alert("Успешный вход через Google");
     } catch (error) {
-      console.error("Ошибка входа:", error);
+      console.error("Ошибка входа через Google:", error.message);
+      alert("Ошибка входа через Google: " + error.message);
     }
   };
 
   const signInWithEmail = async () => {
+    if (!email || !password) {
+      alert("Пожалуйста, заполните все поля.");
+      return;
+    }
+    
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Успешный вход");
     } catch (error) {
       console.error("Ошибка входа:", error);
+      alert("Ошибка входа: " + error.message);
     }
   };
 
@@ -41,6 +56,7 @@ function Auth() {
       alert("Код отправлен");
     } catch (error) {
       console.error("Ошибка отправки кода:", error);
+      alert("Ошибка отправки кода: " + error.message);
     }
   };
 
@@ -50,6 +66,7 @@ function Auth() {
       alert("Успешный вход по телефону");
     } catch (error) {
       console.error("Ошибка подтверждения кода:", error);
+      alert("Ошибка подтверждения кода: " + error.message);
     }
   };
 
@@ -58,20 +75,44 @@ function Auth() {
       {authMethod === "email" ? (
         <div className="auth-box">
           <h2 className="auth-title">Авторизация</h2>
-          <input type="email" placeholder="Email" className="auth-input" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <input type="password" placeholder="Пароль" className="auth-input" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input
+            type="email"
+            placeholder="Email"
+            className="auth-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            className="auth-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
           <button className="auth-button" onClick={signInWithEmail}>Продолжить</button>
           <p className="auth-back" onClick={() => setAuthMethod(null)}>Назад</p>
         </div>
       ) : authMethod === "phone" ? (
         <div className="auth-box">
           <h2 className="auth-title">Авторизация</h2>
-          <input type="tel" placeholder="Номер телефона" className="auth-input" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          <input
+            type="tel"
+            placeholder="Номер телефона"
+            className="auth-input"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
           <button className="auth-button auth-code-button" onClick={sendOtp}>Отправить код</button>
           <div id="recaptcha-container"></div>
           {confirmationResult && (
             <>
-              <input type="text" placeholder="Введите код" className="auth-input" value={otp} onChange={(e) => setOtp(e.target.value)} />
+              <input
+                type="text"
+                placeholder="Введите код"
+                className="auth-input"
+                value={otp}
+                onChange={(e) => setOtp(e.target.value)}
+              />
               <button className="auth-button" onClick={verifyOtp}>Подтвердить</button>
             </>
           )}
@@ -80,11 +121,15 @@ function Auth() {
       ) : (
         <div className="auth-box">
           <h2 className="auth-title">Авторизация</h2>
-          <button className="social-button vk"> <FaVk /> Продолжить с VK </button>
-          <button className="social-button google" onClick={signInWithGoogle}> <FcGoogle /> Продолжить с Google </button>
+          <button className="social-button vk">
+            <FaVk /> Продолжить с VK
+          </button>
+          <button className="social-button google" onClick={signInWithGoogle}>
+            <FcGoogle /> Продолжить с Google
+          </button>
           <p>--------------------------------ИЛИ------------------------------</p>
           <button className="auth-method-button" onClick={() => setAuthMethod("email")}>
-            <MdEmail /> Продолжить с почтой 
+            <MdEmail /> Продолжить с почтой
           </button>
           <button className="auth-method-button" onClick={() => setAuthMethod("phone")}>
             <FaPhone /> По номеру телефона
