@@ -113,7 +113,8 @@ function Auth() {
           <h2 className="auth-title">Авторизация</h2>
           <button className="social-button vk"> <FaVk /> Продолжить с VK </button>
           <button className="social-button google" onClick={signInWithGoogle}> <FcGoogle /> Продолжить с Google </button>
-          <p>--------------------------------ИЛИ------------------------------</p>
+          <p className="auth-p">--------------------------------ИЛИ------------------------------</p>
+          <p className="auth-content-p">ИЛИ</p>
           <button className="auth-method-button" onClick={() => setAuthMethod("email")}>
             <MdEmail /> Продолжить с почтой 
           </button>
