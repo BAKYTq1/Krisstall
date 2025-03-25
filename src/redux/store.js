@@ -1,4 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
+// import CakesReducer from './CakesApi/CakesApi';
+// import OtherReducer from './OtherApi/OtherApi';
 import CakesReducer from "./CakesApi/CakesApi";
 import OtherReducer from "./OtherApi/OtherApi";
 import CoffeeReducer from "./Coffeapi/CoffeApi"; 
@@ -11,6 +13,7 @@ const myStore = configureStore({
     coffee: CoffeeReducer,
     cart: cartReducer,
   },
+
 });
 
 export default myStore;
