@@ -6,8 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import "./header.scss"
 
 import { SlClose } from "react-icons/sl";
-import { IoCartOutline } from "react-icons/io5"; // Добавлен импорт
-
+import { IoCartOutline } from "react-icons/io5"; 
 import "./header.scss";
 
 function Header() {

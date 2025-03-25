@@ -37,7 +37,6 @@ function CartPage() {
 
   return (
     <div className="cart-page">
-      
       <div className='Carttext'>
       <span><PiShoppingCartBold />
       </span>
@@ -45,8 +44,11 @@ function CartPage() {
       </div>
       {cartItems.length === 0 ? (
         <div className="empty-cart">
-          <span><PiShoppingCartBold /></span>
-          <p>Ваша корзина пуста</p>
+          <div>
+
+          <p>Корзина пустая 😕</p>
+        <img src="https://my-react-pizza-v2.netlify.app/static/media/empty-cart.db905d1f4b063162f25b.png" />          
+          </div>
           <Link to="/" className="back-to-shop">Вернуться к покупкам</Link>
         </div>
       ) : (
@@ -94,18 +96,17 @@ function CartPage() {
           
           <div className="cart-summary">
             <div>
-            <span className='allProduct'>Всего товаров: {totalItems} шт</span>
+            <h3 className='allProduct'>Всего товаров: <span>{totalItems} шт</span></h3>
             <div>
 
             <button className="checkout-button">Оформить заказ</button>
-            <Link to="/" className="continue-shopping">Продолжить покупки</Link>
             </div>
             </div>
             <div className="summary-row">
             <h2>Сумма заказа: <span>{totalPrice} сом</span></h2>
             <div className='free'>
               <span>Доставка:</span>
-              <span>Бесплатно</span>
+              <span className='for'>Бесплатно</span>
             </div>
             </div>
           </div>

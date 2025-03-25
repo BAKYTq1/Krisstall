@@ -11,13 +11,12 @@ function Cardd() {
   return (
     <div className='cardd'>
 <button>
-
       <Link to="/cart" className="cart-link">
       <span><IoCartOutline />
       </span>
-{totalItems > 0 && <span className="cart-count">{totalItems}</span>}
-</Link>
-</button>
+      {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+      </Link>
+      </button>
     </div>
   );
 }

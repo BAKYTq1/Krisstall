@@ -6,6 +6,10 @@
     .allProduct{
       font-size: 24px;
       font-weight: 500;
+      span{
+        color: #ff6900;
+        font-weight: 600;
+      }
     }
     .Carttext{
       display: flex;
@@ -24,6 +28,15 @@
     .empty-cart {
       text-align: center;
       padding: 50px 0;
+      p{
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        color: black;
+      }
+      img{
+        width: 400px;
+      }
   
       .back-to-shop {
         display: inline-block;
@@ -124,6 +137,7 @@
         padding: 20px;
         border-radius: 8px;
         display: flex;
+        margin-top: 30px;
         align-items: center;
         justify-content: space-between;
         height: fit-content;
@@ -131,14 +145,18 @@
           display: flex;
           gap: 10px;
           align-items: center;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 500;
+          .for{
+            color: green;
+          }
         }
         h2 {
           font-size: 24px;
           font-weight: 500;
           span{
             color: #ff6900;
+            font-weight: 600;
           }
         }
   
