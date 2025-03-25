@@ -30,8 +30,8 @@ function Header() {
           <Link to={"/WholesaleSales"}> <li>Оптовые продажи</li> </Link>
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
              <Link to={"/contact"}><li>Контакты</li></Link>
-            <Link to={'kachestvo'}><li>Качесвто</li></Link>
-            <li>Отзывы</li>
+            <Link to={'kachestvo'}><li>Качество</li></Link>
+            <Link to={'smart'}><li>Отзывы</li></Link>
           </ul>
         </nav>
 
@@ -50,7 +50,7 @@ function Header() {
             <Link to={'prodaji'}><li>Продажи в рознице</li></Link>
             <Link to={"/contact"}><li>Контакты</li></Link>
             <Link to={'kachestvo'}><li>Качесвто</li></Link>
-            <Link to={'otzyv'}><li>Отзывы</li></Link>
+            <Link to={'smart'}><li>Отзывы</li></Link>
           </ul>
           </div>}
     </div>

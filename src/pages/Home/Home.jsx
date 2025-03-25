@@ -6,6 +6,7 @@ import Auth from '../../components/auth/Auth'
 import Block2 from '../../components/Block-2/Block2'
 import './Style.scss'
 import WholesaleSales from '../../components/WholesaleSales/WholesaleSales'
+import Smart from '../../components/Smart/Smart'
 
 
 function Home() {
