@@ -28,14 +28,14 @@
     margin-top:15px;
     line-height: 35px;    
     li{
-        a{
+        button{
             color: #728299;
-            text-decoration: none;
+            border: none;            
         }
     }
     li:hover{
         
-        a{
+        button{
             color: #495f7d;
         }
     }

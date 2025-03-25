@@ -1,0 +1,111 @@
+.WholesaleSalesBlock3Container {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 16px;
+    backdrop-filter: blur(30px);
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 39px 38px 0px rgba(0, 0, 0, 0.02);
+    .WholesaleSalesBlock3Contant {
+      img{
+        position: absolute;
+        z-index: -1;
+        @media (max-width:425px) {
+          width: 106px;
+        }
+      }
+      h2{
+        color: rgb(25, 25, 25);
+  font-family: Playfair Display;
+  font-size: 32px;
+  font-weight: 800;
+  @media (max-width:400px) {
+    width: 281px;
+    font-family: Playfair Display;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 100%;
+  }
+      }
+      .inputContainer {
+        display: flex;
+        margin-top: 38px;
+        row-gap: 30px;
+        align-items: center;
+        @media (max-width:425px) {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+      input {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        height: 50px;
+        color: #424242;
+        padding-left: 23px;
+        border: 1px solid rgb(198, 209, 224);
+        border-radius: 42px;
+        font-size: 1rem;
+        font-weight: 300;
+        font-family: Inter;
+        margin: 0px 11px;
+        @media (max-width:495px) {
+          width: 315px;
+          height: 44px;
+          font-family: Inter;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+  
+      button {
+  width: 270px;
+  height: 50px;
+  background-color: white;
+  border-radius: 56px;
+  border: 1px solid rgb(161, 99, 65);
+  color: rgb(161, 99, 65);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px 14px;
+  @media (max-width:450px) {
+    width: 315px;
+  height: 44px;
+  font-family: Inter;
+  margin-top: 26px;
+  font-size: 14px;
+  font-weight: 500;
+  }
+      }
+    }
+  }
+  // 508752009
+  // mala.bekova_08
+  @media (max-width: 1275px) {
+    .WholesaleSalesBlock3Container {
+      height: 280px;
+    }
+    .inputContainer{
+      button{
+        // margin-top: 20px !important;
+      }
+    }
+  }
+  @media (max-width:660px) {
+    .WholesaleSalesBlock3Container{
+      background-color: transparent;
+      height: 440px;
+    }
+    .inputContainer
+      .inputContainer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        input {
+          width: 100% !important;
+        }
+      }
+  }
