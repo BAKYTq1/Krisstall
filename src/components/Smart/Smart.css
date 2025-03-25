@@ -1,0 +1,14 @@
+.contayner{
+    width: 600px ;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.q{
+
+text-align: center;
+
+}
+
+
+

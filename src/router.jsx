@@ -10,6 +10,7 @@ import Kachestwo from "./pages/Kachestvo/Kachestwo";
 import Auth from "./components/auth/Auth";
 import CartPage from "./pages/CartPage/CartPage";
 import Contact from "./pages/Contact/Contact";
+import Smart from "./components/Smart/Smart";
 
 export const myRouter = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ export const myRouter = createBrowserRouter([
             { path: '/register', element: <Auth />},
             { path: '/cart', element: <CartPage /> },
             { path: '/contact', element: <Contact /> },
-
+             {path: '/smart', element: <Smart/>}
         ]
     }
 ])
