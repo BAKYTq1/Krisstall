@@ -1,384 +1,234 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inter:wght@100..900&family=Playfair+Display:wght@400..900&display=swap");
+/* Variables */
+:root {
+  --primary-color: #a16341;
+  --secondary-color: #ffd300;
+  --dark-text: #191919;
+  --light-text: #6a6a6a;
+  --background-light: #ffebe0;
+  --blue-accent: #053490;
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 16px;
+}
 
+/* Base Styles */
 .WrapperWholesaleSales {
-  margin: 0 auto;
   max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+  font-family: 'Inter', sans-serif;
 }
 
+.WrapperWholesaleSales h1, 
+.WrapperWholesaleSales h2, 
+.WrapperWholesaleSales h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  color: var(--dark-text);
+}
+
+.WrapperWholesaleSales p {
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* Common Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 56px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #8a5536;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Block 1 Styles */
 .WholesaleSalesBlock1Container {
-  max-width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 16px;
-  backdrop-filter: blur(30px);
-  background: rgb(255, 235, 224);
-  padding: 30px;
-  transition: all 0.5s ease-in-out;
-  @media (max-width: 768px) {
-    height: auto;
-    max-width: 1000px;
-    padding: 20px;
-  }
-  @media (max-width:426px) {
-    width: 390px;
-    height: 482px;
-      
-  }
-
-  .WholesaleSalesBlock1Contant {
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: 1024px) {
-      display: flex;
-      
-      justify-content: space-between;
-    }
-    @media (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-    }
-    @media (max-width:426px) {
-      flex-direction: column;
-    }
-
-    h1 {
-      color: #191919;
-      font-family: Playfair Display;
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin: 0 auto;
-      transition: font-size 0.5s ease-in-out;
-
-      @media (max-width: 768px) {
-        font-size: 2rem;
-      }
-
-      @media (max-width:426px) {
-        width: 307px;
-        color: rgb(25, 25, 25);
-        font-family: Playfair Display;
-        font-size: 28px;
-        font-weight: 800;
-        line-height: 100%;
-        
-              }
-        }
-          
-          p {
-            color: rgb(66, 66, 66);
-            font-family: Inter;
-            padding-top: 10px;
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 1.25;
-            opacity: 0.9;
-            @media (max-width: 768px) {
-              max-width: 400px;
-              text-align: center;
-              display: flex;
-              margin: 0 auto;
-              }
-            @media (max-width:426px) {
-            color: rgb(66, 66, 66);
-            font-family: Inter;
-            font-size: 14px;
-            width: 319px;
-            font-weight: 300;
-              }
-          }
-    .call {
-      width: 250px;
-      height: 50px;
-      border: none;
-      border-radius: 56px;
-      background: rgb(161, 99, 65);
-      color: white;
-      font-family: "Inter", sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      margin-top: 2rem;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        background: rgb(140, 80, 50);
-      }
-      @media (max-width:426px) {
-        width: 319px;
-        height: 45px;
-        color: rgb(255, 255, 255);
-font-family: Inter;
-font-size: 14px;
-font-weight: 500;
-line-height: 17px;
-margin-bottom: 40px;
-      }
-    }
-  }
-  .advertisingGrid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    @media (max-width:768px) {
-      display: flex;
-      margin: 0 auto;
-      margin-top: 20px;
-      gap: 20px;
-    }
-    @media (max-width:426px) {
-      display:flex ;
-      flex-wrap: wrap;
-      width: 500px;
-    }
-    .btnDiv {
-      width: 278px;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      padding-left: 70px;
-      background: linear-gradient(92.53deg, rgba(161, 99, 65, 0.01) 0.178%,rgba(161, 99, 65, 0.12) 102.456%);
-  
-      @media (max-width: 768px) {
-        width: 170px;
-        padding-left: 0px;
-        height: 75px;  
-        background: none; 
-       }
-      @media (max-width:426px) {
-        width: 170px;
-        padding-left: 0px;
-        height: 75px;
-        background: linear-gradient(92.53deg, rgba(161, 99, 65, 0.01) 0.178%,rgba(161, 99, 65, 0.12) 102.456%);
-  
-      }
-    }
-    .custom {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 146.45px;
-      height: 37.15px;
-      font-family: Inter;
-      font-size: 1.4rem;
-      font-weight: bold;
-      background: rgb(5, 52, 144);
-      color: rgb(255, 211, 0);
-      border: none;
-      cursor: pointer;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-      clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
-      @media (max-width: 768px) {
-        font-size: 16px;
-      }
-      @media (max-width:426px) {
-        font-size: 16px;
-      }
-  
-      .flower-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-  
-      .flower-icon {
-        width: 20.5px;
-        height: 16.47px;
-        margin-right: 10px;
-      }
-    }
-    .scooterContainer{
-      width: 278px;
-      height: 85px;
-      display: flex;
-      align-items: center;
-      padding-left: 75px;
-      @media (max-width: 768px) {
-        width: 170px;
-        height: 75px;
-        padding-left: 0px;
-  
-      }
-      @media (max-width:426px) {
-        width: 170px;
-        height: 75px;
-        padding-left: 0px;
-  
-      }
-    }
-  
-    .scooter {
-      display: flex;
-      color: rgb(255, 72, 111);
-      font-size: 1.4rem;
-      font-weight: 700;
-      gap: 6px;
-      font-family: Inter;
-  
-      img {
-        width: 120px;
-      }
-  
-      @media (max-width: 426px) {
-        font-size: 1rem;
-        img {
-          width: 80px;
-        }
-      }
-    }
-  }
+  background: var(--background-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 40px;
+  overflow: hidden;
 }
 
+.WholesaleSalesBlock1Container h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
 
+.WholesaleSalesBlock1Container p {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  max-width: 370px;
+}
 
+.advertisingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.grid-item {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.grid-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.custom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 146px;
+  height: 37px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background: var(--blue-accent);
+  color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  transition: var(--transition);
+}
+
+.custom-btn:hover {
+  opacity: 0.9;
+}
+
+.flower-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flower-icon {
+  width: 20px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+/* Block 2 Styles */
 .WholesaleSalesBlock2Container {
   width: 100%;
   padding: 50px;
   max-width: 1200px;
   display: flex;
-  justify-content: center;
-
-  .WholesaleSalesBlock2Contant {
-    max-width: 1200px;
-    @media (max-width:426px) {
-     width: 319px;     
-    }
-
-    h2 {
-      color: rgb(25, 25, 25);
-      font-family: Playfair Display;
-      font-size: 32px;
-      font-weight: 800;
-      margin-top: 60px;
-      @media (max-width:426px) {
-        h2{
-          width: 288px;
-    height: 56px;
-    color: rgb(25, 25, 25);
-    font-family: Playfair Display;
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: left;
-  
-        }
-      }
-    }
-
-    p {
-      max-width: 970px;
-      color: rgb(66, 66, 66);
-      font-family: Inter;
-      padding-top: 20px;
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 1.25;
-      opacity: 0.9;
-    }
-    @media (max-width:426px) {
-      p{
-
-    color: rgb(66, 66, 66);
-    font-family: Inter;
-    font-size: 14px;
-    width: 319px;
-    font-weight: 300;
-      }
-    }
-  }
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px;
+  margin-bottom: 40px;
 }
 
-.WholesaleSalesBlock3Container {
-  width: 100%;
+.WholesaleSalesBlock2Contant {
   max-width: 1200px;
+}
+
+.WholesaleSalesBlock2Container h2 {
+  color: rgb(25, 25, 25);
+  font-family: Playfair Display;
+  font-size: 32px;
+  font-weight: 800;
   margin-top: 60px;
-  padding: 30px;
-  background-color: white;
-  border-radius: 15px;
-  margin: 0 auto;
-  box-shadow: 0px 39px 38px rgba(0, 0, 0, 0.02);
-  text-align: center;
+  margin-bottom: 20px;
+}
 
-  @media (max-width: 426px) {
-    width: 100%;
-    max-width: 355px;
-    padding: 20px;
+.WholesaleSalesBlock2Container p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media (max-width: 426px) {
+  .WholesaleSalesBlock2Contant {
+    width: 319px;
   }
-
-  .WholesaleSalesBlock3Contant {
-    h2 {
-      font-family: Playfair Display, serif;
-      font-size: 2rem;
-      font-weight: 800;
-
-      @media (max-width: 426px) {
-        font-size: 1.8rem;
-      }
-    }
-
-    .inputContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 10px;
-
-      input {
-        width: 270px;
-        height: 50px;
-        padding-left: 20px;
-        border: 1px solid rgb(198, 209, 224);
-        border-radius: 42px;
-        font-size: 1rem;
-        font-family: Inter, sans-serif;
-
-        @media (max-width: 426px) {
-          width: 100%;
-          max-width: 315px;
-          height: 44px;
-        }
-      }
-
-      button {
-        width: 270px;
-        height: 50px;
-        background-color: white;
-        border-radius: 56px;
-        border: 1px solid rgb(161, 99, 65);
-        color: rgb(161, 99, 65);
-        font-family: Inter, sans-serif;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-
-        &:hover {
-          background: rgb(161, 99, 65);
-          color: white;
-          transition: ease-in-out 0.3s;
-        }
-
-        @media (max-width: 426px) {
-          width: 100%;
-          max-width: 315px;
-          height: 44px;
-        }
-      }
-    }
+  
+  .WholesaleSalesBlock2Container h2 {
+    width: 288px;
+    height: 56px;
+    font-size: 28px;
+    line-height: 100%;
   }
 }
 
-@media (max-width:700px) {
-  .WholesaleSalesBlock3Container{
+/* Block 3 Styles */
+.WholesaleSalesBlock3Container {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.circle-decoration {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  opacity: 0.2;
+}
+
+.WholesaleSalesBlock3Container h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.inputContainer input {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .WholesaleSalesBlock3Container {
     height: 450px !important;
     border: none;
-  box-shadow: none;
+    box-shadow: none;
     background-color: transparent !important;
   }
-  .inputContainer{
-    input{
-      width: 100% !important;
-    }
+  
+  .inputContainer input {
+    width: 100% !important;
   }
 }
