@@ -1,5 +1,5 @@
 .boss-quality{
-    max-width: 100%;
+    max-width: 100% !important;
     height: 272px;
     display: flex;
     justify-content: space-around;
@@ -50,4 +50,31 @@ background-color: rgb(161, 99, 65);
     .img-quality{
 
     }
+}
+.img-22{
+  display: none;
+}
+@media (max-width: 570px) {
+ .boss-quality{
+  button{
+    width: 100%;
+  }
+  display: block;
+  height: 495px;
+  width: 100%;
+  .quality-left{
+    img{
+      display: none;
+    }
+  }
+  .img-quality{
+    justify-content: space-between;
+    margin-top: 20px;
+    display: flex;
+  }
+  .img-22{
+    display: block;
+  }
+
+  }
 }

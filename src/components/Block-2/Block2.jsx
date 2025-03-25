@@ -133,12 +133,14 @@ function Block2() {
       )}
     </div>
                 </div>
-                <div className="item-block2">
+                <div className="item-block-boss">
+                <div className="item-block22">
                 {filteredData.length ? (
                     filteredData.map((item) => <Cart key={item.id} data={item} />)
                 ) : (
                     <p>Нет товаров в этой категории</p>
                 )}
+                </div>
                 </div>
             </div>
         </div>

@@ -1,13 +1,13 @@
-import React, { useState, useRef } from "react"; // Добавлен импорт хуков
+import React, { useState, useRef } from 'react';
 import "./WholesaleSales.scss";
 import flower from "./svg/flowerHead.svg";
 import flowerBody from "./svg/flowerBody.svg";
-import som from "./svg/сомакатimg.svg";
+import som from "./svg/сомакат.svg";
 import magnit from "./svg/магнит.svg";
 import karavan from "./svg/karavan.svg";
 import dis from "./svg/discrip.svg";
 import circle from "./svg/circle.svg";
-
+import Input from '../inpur/Input';
 function WholesaleSales() {
   const [formData, setFormData] = useState({
     name: "",
@@ -64,80 +64,12 @@ function WholesaleSales() {
             <div className="grid-item">
               <img src={som} alt="som" className="brand-logo" />
             </div>
-            <div className="grid-item">
-              <img src={magnit} alt="magnit" className="brand-logo" />
-            </div>
-            <div className="grid-item">
-              <img src={dis} alt="discrip" className="brand-logo" />
-            </div>
-            <div className="grid-item">
-              <img src={karavan} alt="karavan" className="brand-logo" />
-            </div>
-          </div>
-        </div>
+          </div> {/* Закрываем div advertisingGrid */}
+        </div> {/* Закрываем div WholesaleSalesBlock1Contant */}
       </section>
 
-      {/* Модальное окно */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <h3>Успешно отправлено!</h3>
-            <p>Мы свяжемся с вами в ближайшее время.</p>
-            <button 
-              onClick={() => setShowModal(false)}
-              className="modal-close-btn"
-            >
-              Закрыть
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Блок 2 - Условия продаж */}
-      <section className="WholesaleSalesBlock2Container">
-        <div className="WholesaleSalesBlock2Contant">
-          <h2>Условия оптовых продаж</h2>
-          <p>
-            {/* Ваш текст */}
-          </p>
-        </div>
-      </section>
-
-      {/* Блок 3 - Форма связи */}
-      <section className="WholesaleSalesBlock3Container" ref={formRef}>
-        <div className="WholesaleSalesBlock3Contant">
-          <img src={circle} alt="circle" className="circle-decoration" />
-          <h2>Форма связи с менеджером</h2>
-          <form onSubmit={handleSubmit} className="inputContainer">
-            <input
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              placeholder="Ваше имя"
-              type="text"
-              required
-            />
-            <input
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              placeholder="Email"
-              type="email"
-              required
-            />
-            <input
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              placeholder="Телефон"
-              type="tel"
-              required
-            />
-            <button type="submit" className="btn-secondary">
-              Отправить
-            </button>
-          </form>
-        </div>
+      <section ref={formRef}>
+        <Input />
       </section>
     </div>
   );
